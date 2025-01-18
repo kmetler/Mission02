@@ -11,8 +11,11 @@ namespace Mission02
     {
         private Random rnd = new Random();
 
-        public void RollDice (int numRolls, int[] aTotals)
+        public int[] RollDice (int numRolls)
         {
+            // create array for totals of dice
+            int[] aTotals = new int[13];
+
             //for the number of times they said
             for (int i = 0; i < numRolls; i++)
             {
@@ -27,6 +30,8 @@ namespace Mission02
                 //go update counter of each number
                 aTotals[total]++;
             }
+
+            return aTotals;
         }
     }
 }
